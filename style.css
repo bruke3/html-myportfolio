@@ -1,0 +1,436 @@
+/* RESET SOME DEFAULT STYLES FOR CONSISTENCY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* NICE BLUE */
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* DARKER BLUE */
+}
+
+/* HEADER SECTION */
+header {
+    background-color: #fff;  /* white background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links li a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .nav-links li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/*  HERO SECTION */
+.hero {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #007bff;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+/* NAV SECTION */
+.nav-links a.active {
+    color: #007BFF;  /* matches theme color */
+    font-weight: bold;
+    border-bottom: 2px solid #007BFF; /* underline for visibility */
+}
+
+/* ABOUT SECTION */
+.about {
+    background-color: #fff; /* clean white background */
+    color: #333; /* dark text for readability */
+    padding: 50px 20px;
+}
+
+.about .container {
+    display: flex;
+    flex-wrap: wrap; /* makes it responsive */
+    align-items: center;
+    gap: 20px;
+}
+
+.about .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #007bff;  /*  blue border for a pop of color */
+    object-fit: cover;  /* ensures the image fits well */
+}
+
+.about .about-text {
+    flex: 1;  /* allows the text to take up the remaining space */
+    min-width: 300px; /*  Ensures it doesn't get to narrow */
+}
+
+.about .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff; /*  matches the blue theme*/
+}
+
+.about .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .about .container {
+        flex-direction: column;  /* Stacks the photo and text vertically */
+        text-align: center;  /*  Centers text and photo */
+    }
+
+    .about .profile-photo {
+        margin-bottom: 20px;
+    }
+}
+
+/* PROJECT SECTION */
+.projects {
+    background-color: #f4f4f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff; /* white card background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* subtle shadow */
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* lift the card slightly */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Darker shadow */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;  /* Darker blue */
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* SKILLS SECTION */
+.skills {
+    background-color: #f4f4f9;  /* Light gray background for contrast */
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.skills p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;  /* subtle text color for descriptions */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));  /* Responsive grid */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* adds a border for separation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* soft rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover effect */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);  /* lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* emphasized shadow */
+}
+
+.skill-item i {
+    font-size: 2rem;  /* large icons */
+    color: #007bff;  /* theme color */
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 2rem; /* large icons */
+    color: #007bff;  /* theme color */
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* CONTACT SECTION */
+.contact {
+    background-color: #007bff;  /* blue background */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;  /* CENTERS THE FORM */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #0056b3;  /* ADDS FOCUS EFFECT */
+}
+
+textarea {
+    resize: none; /* prevents resizing */
+}
+
+
+.contact .btn {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+
+.contact .btn:hover {
+    background-color: #d8d8dc;
+}
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        width: 100%;  /* Ensures full-width on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills h2 {
+        font-size: 2rem;
+    }
+
+    .skill-item {
+        padding: 10px;
+    }
+
+    .skill-item i {
+        font-size: 1.5rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: #333;  /* dark background for contrast */
+    color: #f4f4f9; /* light text for readability */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .footer-links {
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: #007bff; /* theme color for links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #0056b3;  /* Darker shade on hover */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer i {
+    color: #007bff;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer i:hover {
+    color: #0056b3;
+}
